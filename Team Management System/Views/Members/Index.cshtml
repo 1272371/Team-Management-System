@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Team_Management_System.Models.Member>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.member_lastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.member_FirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.member_contacNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.member_email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.captain_status)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.member_username)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.member_password)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Adminstrator_ID)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.member_lastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.member_FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.member_contacNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.member_email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.captain_status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.member_username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.member_password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adminstrator_ID)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.member_ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.member_ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.member_ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

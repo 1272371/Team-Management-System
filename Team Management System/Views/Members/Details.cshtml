@@ -1,0 +1,66 @@
+﻿@model Team_Management_System.Models.Member
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Member</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.member_lastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.member_lastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.member_FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.member_FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.member_contacNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.member_contacNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.member_email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.member_email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.captain_status)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.captain_status)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.member_username)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.member_username)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.member_password)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.member_password)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Adminstrator_ID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Adminstrator_ID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.member_ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

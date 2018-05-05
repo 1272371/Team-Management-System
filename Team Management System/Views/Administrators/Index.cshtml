@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Team_Management_System.Models.Administrator>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Adminstrator_username)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Adminstrator_password)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Adminstrator_lastname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Adminstrator_firstname)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adminstrator_username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adminstrator_password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adminstrator_lastname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adminstrator_firstname)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Adminstrator_ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Adminstrator_ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Adminstrator_ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

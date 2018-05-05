@@ -1,0 +1,42 @@
+﻿@model Team_Management_System.Models.Administrator
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Administrator</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Adminstrator_username)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Adminstrator_username)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Adminstrator_password)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Adminstrator_password)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Adminstrator_lastname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Adminstrator_lastname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Adminstrator_firstname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Adminstrator_firstname)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Adminstrator_ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
